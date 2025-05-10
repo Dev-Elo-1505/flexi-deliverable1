@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Movie Watchlist</title>
+  </head>
+  <body>
+    <!-- We are going to be building a movie watchlist using javascript arrays. The movies will be stored in an array, each in an object with some properties like name, genre, rating, duration etc and we will be able to add, remove, and display them. We will also be able to sort the movies by title and release date. We will use the following methods: push, pop, shift, unshift, splice, slice, forEach, map, filter, reduce. -->
+    <!-- deliverables
+      -- use arrow functions
+      -- use map to display movies
+      -- use filter to filter by genre
+      -- use reduce to calculate total watch time
+      -- use foreach to loop
+     -->
+    <!-- flow
+      -- type a movie
+          movie is an array of objects with properties name, genre, duration(i will simplify it to hours, minutes and seconds) and rating
+      -- gets added to the list
+      -- display list
+      -- click delete button to delete a movie
+       -->
+    <div class="container">
+      <div class="heading">
+        <h1>Movies Watchlist</h1>
+        <p>Keep track of your favourite movies in 0.5 seconds!</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Duration</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="movie-list"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total Watch Time</td>
+            <td id="totalDuration">00:00:00</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="movie-form">
+        <h2>Add a Movie</h2>
+        <form id="movie-form">
+          <input
+            type="text"
+            id="title"
+            placeholder="Title e.g Mouse"
+            required
+          />
+          <input
+            type="text"
+            id="genre"
+            placeholder="Genre e.g Thriller"
+            required
+          />
+          <input
+            type="number"
+            id="rating"
+            placeholder="Your Rating (1-10)"
+            required
+            min="1"
+            max="10"
+          />
+          <input
+            type="text"
+            id="duration"
+            placeholder="Duration e.g 1:30:00"
+            required
+          />
+          <button type="submit" id="add-movie">Add Movie</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
